@@ -1,0 +1,12 @@
+Les Etapes: 
+
+1- composer init  	  // Lancera l'utilitaire interactif, qui permettra de créer les fichiers de configuration de Composer: composer.json
+2- Composer self-update  // Fait une mise à jour de composer
+
+3- composer install 	//Va créer un dossier vendor dans lequel composer va créer le système autoload et télécharger les dépendances du projet, il ne faut pas versionner le dossier vendor ni le modifier.
+Fully Qualified Class Name (FQCN) : nom pleinement qualifié de la classe.
+
+4- composer dump-autoload //Mettre à jour l'autoload de composer.
+
+Le site Packagist : https://packagist.org/
+

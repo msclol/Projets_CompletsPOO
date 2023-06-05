@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(119, 74, 119);
+}
+
+form{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    margin: 10px;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    outline: none; /*Gestion de liseret*/
+
+}
+form input[type ="submit"]{
+    cursor:pointer;
+    transition:1s;
+}
+
+form input[type ="submit"]:hover{
+    background-color: rgb(6, 153, 35);
+    border: 1px solid rgb(6, 153, 35);
+}
+
+[data-class="majuscule"]{
+    text-transform:capitalize;
+    color: #ed2825;
+
+
+}
+
+section {
+    width:70%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+
