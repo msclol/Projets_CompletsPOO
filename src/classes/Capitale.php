@@ -5,7 +5,7 @@
         private $pays;
         private $capitale;
 
-
+        
         public function __construct($pays, $capitale)
         {
             $this->setPays($pays);
