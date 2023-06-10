@@ -1,9 +1,6 @@
 <?php
     namespace App;
     class Formulaire{
-        // private $type;
-        // private $name;
-
         protected $codeChamp;
         protected $codeBouton;
         protected $codeFormulaire;
@@ -13,10 +10,10 @@
         const FIN_FORMULAIRE= '</form>';
 
         //Méthodes setChamp qui écrit un champ de formulaire - définit les 03 types accepté: text, number ou email
-        public function setChamp($type, $name){
+        public function setChamp($type, $name, $value=''){
             if(($type == 'text')||($type == 'number') ||($type == 'email')){
 
-            $this->codeChamp .='<input type="'.$type.'" name="'.$name.'" placeholder="'.ucfirst($name).'">';
+            $this->codeChamp .='<input type="'.$type.'" value="'.$value.'" name="'.$name.'" placeholder="'.ucfirst($name).'">';
             }
            }
 

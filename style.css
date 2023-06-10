@@ -25,14 +25,25 @@ form{
     flex-direction: column;
 }
 
-form input{
-    margin: 10px;
-    padding: 7px;
+ form input{
+    margin: 15px;
+    padding: 5px;
     border-radius: 7px;
     border: 1px solid #ccc;
     outline: none; /*Gestion de liseret*/
-
 }
+
+select{
+    margin: 15px;
+    width:80px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    outline: none; /*Gestion de liseret*/
+}
+
+
+
 form input[type ="submit"]{
     cursor:pointer;
     transition:1s;
@@ -40,7 +51,7 @@ form input[type ="submit"]{
 
 form input[type ="submit"]:hover{
     background-color: rgb(11, 11, 10);
-    border: 1px solid rgb(11, 11, 10);
+    border: 1px solid rgb(46, 79, 30);
     color: white;
     font-weight: bold;
 }
