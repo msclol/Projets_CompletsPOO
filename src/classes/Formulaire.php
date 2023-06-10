@@ -1,7 +1,12 @@
 <?php
+    namespace App;
     class Formulaire{
-        private $type;
-        private $name;
+        // private $type;
+        // private $name;
+
+        protected $codeChamp;
+        protected $codeBouton;
+        protected $codeFormulaire;
 
         //Création des constantes
         const DEBUT_FORMULAIRE= '<form method="post" action ="">';
@@ -11,32 +16,32 @@
         public function setChamp($type, $name){
             if(($type == 'text')||($type == 'number') ||($type == 'email')){
 
-            $this->type = $type;
-            $this->name = $name;
+            $this->codeChamp .='<input type="'.$type.'" name="'.$name.'" placeholder="'.ucfirst($name).'">';
             }
            }
 
-            //Méthodes SetBouton qui retourne un bouton de formulaire
-         public function SetBouton($name){
-            $this->name = $name;              
-        }
-
-        //Méthodes getChamp qui retourne un champ de formulaire
-        public function getChamp(){
-            if(!empty($this->type) && !empty($this->name)){
-                $champ = '<input type="'.$this->type.'" name="'.$this->name.'" placeholder="'.ucfirst($this->name).'">';
-                return $champ;
-            }              
-        }
-
-        public function getBouton(){
-            if(!empty($this->name)){
-                $bouton='<input type="submit" name="'.$this->name.'"value="'.ucfirst($this->name).'">';
-            return $bouton;
+          public function getFormulaire(){
+            if(!empty($this->codeChamp) || !empty($this->codeBouton)){
+                $this->codeFormulaire = self::DEBUT_FORMULAIRE;
+                $this->codeFormulaire.=$this->codeChamp;
+                $this->codeFormulaire.=$this->codeBouton;
+                $this->codeFormulaire .= self::FIN_FORMULAIRE;      // .= garder en mémoire
+                
+                return $this->codeFormulaire;
 
             }
-                          
+
+          }
+       
+
+        //Méthodes SetBouton qui retourne un bouton de formulaire
+         public function SetBouton($name){
+            $name2 = str_replace(' ','_', $name);
+            $this->codeBouton= '<input type="submit" name="'.$name2.'"value="'.ucfirst($name).'">';              
         }
+
+        //Méthodes qui retourne le bouton du formulaire
+       
 
         
 
