@@ -1,0 +1,18 @@
+@startuml
+class Utilisateur{
+  -friends:array
+  +AddFriend():array
+  +LikeVideo():void
+  +WriteComment():string
+  +deleteFriend():void
+}
+
+ChessBoard o-- Piece
+
+ChessBoard *-- Case
+
+Vehicle <|-down- Bus
+Vehicle <|-down- Car
+Vehicle <|-down- Moto
+
+@enduml

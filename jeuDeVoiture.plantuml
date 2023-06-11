@@ -1,0 +1,21 @@
+@startuml
+Car *-right- Engine
+Car o-- RacingCircuit
+class Car{
+    -wheels: array
+    -engine: Engine
+    +movingForward(int):void
+    +brake():void
+}
+
+class Engine{
+    start():void
+
+}
+
+class RacingCircuit{
+    -cars: array
+    isLive():Boolean
+}
+
+@enduml
