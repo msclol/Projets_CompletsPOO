@@ -4,6 +4,7 @@ Car o-- RacingCircuit
 class Car{
     -wheels: array
     -engine: Engine
+    + __construct(Engine)
     +movingForward(int):void
     +brake():void
 }
@@ -14,7 +15,7 @@ class Engine{
 }
 
 class RacingCircuit{
-    -cars: array
+    -cars: ?array
     isLive():Boolean
 }
 
